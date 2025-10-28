@@ -13,8 +13,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css" rel="stylesheet">
   </head>
 <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav id="navigation" class="nav">
+    <nav id="navigation" class="nav" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-content">
                 <a href="#" class="nav-brand">BVS Sushanth</a>
@@ -29,9 +32,12 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="mobile-menu-btn">
-                    <i data-lucide="menu" class="menu-icon"></i>
-                    <i data-lucide="x" class="close-icon hidden"></i>
+                <button id="mobile-menu-btn" 
+                        class="mobile-menu-btn" 
+                        aria-label="Toggle mobile menu"
+                        aria-expanded="false">
+                    <i data-lucide="menu" class="menu-icon" aria-hidden="true"></i>
+                    <i data-lucide="x" class="close-icon hidden" aria-hidden="true"></i>
                 </button>
             </div>
 
@@ -46,18 +52,18 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-label="Introduction">
             <!-- Animated gradient orbs -->
-            <div class="hero-orb hero-orb-1"></div>
-            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
 
             <div class="hero-container">
                 <div class="hero-content">
                     <!-- Status badge -->
                     <div class="status-badge">
-                        <i data-lucide="sparkles" class="status-icon"></i>
+                        <i data-lucide="sparkles" class="status-icon" aria-hidden="true"></i>
                         <span class="status-text">Available for opportunities</span>
                     </div>
 
@@ -78,15 +84,15 @@
 
                     <div class="hero-badges">
                         <div class="badge">
-                            <i data-lucide="code-2" class="badge-icon"></i>
+                            <i data-lucide="code-2" class="badge-icon" aria-hidden="true"></i>
                             Python Developer
                         </div>
                         <div class="badge">
-                            <i data-lucide="brain" class="badge-icon"></i>
+                            <i data-lucide="brain" class="badge-icon" aria-hidden="true"></i>
                             Machine Learning
                         </div>
                         <div class="badge">
-                            <i data-lucide="zap" class="badge-icon"></i>
+                            <i data-lucide="zap" class="badge-icon" aria-hidden="true"></i>
                             Problem Solver
                         </div>
                     </div>
@@ -95,11 +101,11 @@
                         <button class="btn btn-primary" data-target="#projects">
                             <span class="btn-content">
                                 View My Work
-                                <i data-lucide="arrow-right" class="btn-icon"></i>
+                                <i data-lucide="arrow-right" class="btn-icon" aria-hidden="true"></i>
                             </span>
                         </button>
                         <button class="btn btn-outline" data-target="#contact">
-                            <i data-lucide="mail" class="btn-icon"></i>
+                            <i data-lucide="mail" class="btn-icon" aria-hidden="true"></i>
                             Get in Touch
                         </button>
                     </div>
@@ -107,7 +113,7 @@
             </div>
 
             <!-- Scroll indicator -->
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" aria-hidden="true">
                 <div class="scroll-wheel">
                     <div class="scroll-dot"></div>
                 </div>
@@ -115,11 +121,11 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about">
-            <div class="about-orb"></div>
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <div class="about-orb" aria-hidden="true"></div>
             
             <div class="container">
-                <h2 class="section-title">
+                <h2 id="about-heading" class="section-title">
                     About <span class="gradient-text">Me</span>
                 </h2>
                 <p class="section-subtitle">
@@ -146,7 +152,7 @@
                             <div class="highlight-card">
                                 <div class="highlight-header">
                                     <div class="highlight-icon">
-                                        <i data-lucide="target"></i>
+                                        <i data-lucide="target" aria-hidden="true"></i>
                                     </div>
                                     <p class="highlight-title">Fresh Graduate</p>
                                 </div>
@@ -155,7 +161,7 @@
                             <div class="highlight-card">
                                 <div class="highlight-header">
                                     <div class="highlight-icon">
-                                        <i data-lucide="rocket"></i>
+                                        <i data-lucide="rocket" aria-hidden="true"></i>
                                     </div>
                                     <p class="highlight-title">2+ Projects</p>
                                 </div>
@@ -164,7 +170,7 @@
                             <div class="highlight-card">
                                 <div class="highlight-header">
                                     <div class="highlight-icon">
-                                        <i data-lucide="trending-up"></i>
+                                        <i data-lucide="trending-up" aria-hidden="true"></i>
                                     </div>
                                     <p class="highlight-title">Actively Learning</p>
                                 </div>
@@ -176,7 +182,7 @@
                     <div class="about-image">
                         <div class="image-container">
                             <img src="src/assets/about-photo-new.png" alt="Sushanth working at desk" class="about-img">
-                            <div class="floating-badge">
+                            <div class="floating-badge" aria-hidden="true">
                                 <p class="badge-label">Passionate about</p>
                                 <p class="badge-value gradient-text">AI Innovation</p>
                             </div>
@@ -187,9 +193,9 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="education">
+        <section id="education" class="education" aria-labelledby="education-heading">
             <div class="container">
-                <h2 class="section-title">
+                <h2 id="education-heading" class="section-title">
                     <span class="gradient-text">Education</span>
                 </h2>
                 <p class="section-subtitle">
@@ -197,9 +203,9 @@
                 </p>
 
                 <div class="education-list">
-                    <div class="education-card">
+                    <article class="education-card">
                         <div class="education-content">
-                            <div class="education-icon">
+                            <div class="education-icon" aria-hidden="true">
                                 <i data-lucide="graduation-cap"></i>
                             </div>
                             <div class="education-details">
@@ -210,11 +216,11 @@
                                 <p class="education-institution">Aurora's Scientific and Technological Institute, Hyderabad</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="education-card">
+                    <article class="education-card">
                         <div class="education-content">
-                            <div class="education-icon">
+                            <div class="education-icon" aria-hidden="true">
                                 <i data-lucide="book-open"></i>
                             </div>
                             <div class="education-details">
@@ -224,11 +230,11 @@
                                 <p class="education-institution">Sree Vijaya Durga Junior College, Rajahmundry</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="education-card">
+                    <article class="education-card">
                         <div class="education-content">
-                            <div class="education-icon">
+                            <div class="education-icon" aria-hidden="true">
                                 <i data-lucide="school"></i>
                             </div>
                             <div class="education-details">
@@ -237,15 +243,15 @@
                                 <p class="education-institution">Bhashyam High School, Rajahmundry</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills">
+        <section id="skills" class="skills" aria-labelledby="skills-heading">
             <div class="container">
-                <h2 class="section-title">
+                <h2 id="skills-heading" class="section-title">
                     Skills & <span class="gradient-text">Expertise</span>
                 </h2>
                 <p class="section-subtitle">
@@ -256,7 +262,7 @@
                     <!-- Technical Skills -->
                     <div class="skills-card skills-card-large">
                         <div class="skills-card-header">
-                            <div class="skills-icon">
+                            <div class="skills-icon" aria-hidden="true">
                                 <i data-lucide="code-2"></i>
                             </div>
                             <h3 class="skills-card-title">Technical Skills</h3>
@@ -300,7 +306,7 @@
                     <div class="other-skills">
                         <div class="skills-card">
                             <div class="skills-card-header">
-                                <div class="skills-icon">
+                                <div class="skills-icon" aria-hidden="true">
                                     <i data-lucide="users"></i>
                                 </div>
                                 <h3 class="skills-card-title">Soft Skills</h3>
@@ -318,7 +324,7 @@
 
                         <div class="skills-card">
                             <div class="skills-card-header">
-                                <div class="skills-icon">
+                                <div class="skills-icon" aria-hidden="true">
                                     <i data-lucide="languages"></i>
                                 </div>
                                 <h3 class="skills-card-title">Languages</h3>
@@ -337,11 +343,11 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="projects-orb"></div>
+        <section id="projects" class="projects" aria-labelledby="projects-heading">
+            <div class="projects-orb" aria-hidden="true"></div>
             
             <div class="container">
-                <h2 class="section-title">
+                <h2 id="projects-heading" class="section-title">
                     My <span class="gradient-text">Work</span>
                 </h2>
                 <p class="section-subtitle">
@@ -349,11 +355,11 @@
                 </p>
 
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <div class="project-overlay"></div>
-                            <img src="src/assets/project-roami.jpg" alt="Roami - Smart Travel Planner" class="project-img">
-                            <div class="project-badges">
+                            <div class="project-overlay" aria-hidden="true"></div>
+                            <img src="src/assets/project-roami.jpg" alt="Roami - Smart Travel Planner project screenshot" class="project-img">
+                            <div class="project-badges" aria-hidden="true">
                                 <div class="project-badge project-badge-primary">
                                     <i data-lucide="star" class="badge-icon"></i>
                                     Major Project
@@ -370,15 +376,15 @@
                             
                             <ul class="project-description">
                                 <li class="project-desc-item">
-                                    <i data-lucide="code-2" class="desc-icon"></i>
+                                    <i data-lucide="code-2" class="desc-icon" aria-hidden="true"></i>
                                     <span>Developed a smart travel planner web app using React and Node.js to generate personalized itineraries</span>
                                 </li>
                                 <li class="project-desc-item">
-                                    <i data-lucide="code-2" class="desc-icon"></i>
+                                    <i data-lucide="code-2" class="desc-icon" aria-hidden="true"></i>
                                     <span>Integrated Gemini (Google's LLM) to dynamically generate destination recommendations and day-wise plans based on user inputs</span>
                                 </li>
                                 <li class="project-desc-item">
-                                    <i data-lucide="code-2" class="desc-icon"></i>
+                                    <i data-lucide="code-2" class="desc-icon" aria-hidden="true"></i>
                                     <span>Built a rich frontend UI with category-based filtering and travel mood tagging for enhanced user experience</span>
                                 </li>
                             </ul>
@@ -391,19 +397,23 @@
                             </div>
 
                             <div class="project-buttons">
-                                <a href="https://github.com/sushanth-04" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                                    <i data-lucide="github" class="btn-icon"></i>
+                                <a href="https://github.com/sushanth-04" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn btn-primary btn-sm">
+                                    <i data-lucide="github" class="btn-icon" aria-hidden="true"></i>
                                     View Code
+                                    <span class="sr-only">(opens in new tab)</span>
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <div class="project-overlay"></div>
-                            <img src="src/assets/project-phishing.jpg" alt="Phishing Website Detection" class="project-img">
-                            <div class="project-badges">
+                            <div class="project-overlay" aria-hidden="true"></div>
+                            <img src="src/assets/project-phishing.jpg" alt="Phishing Website Detection project screenshot" class="project-img">
+                            <div class="project-badges" aria-hidden="true">
                                 <div class="project-badge project-badge-primary">
                                     <i data-lucide="star" class="badge-icon"></i>
                                     Mini Project
@@ -420,11 +430,11 @@
                             
                             <ul class="project-description">
                                 <li class="project-desc-item">
-                                    <i data-lucide="code-2" class="desc-icon"></i>
+                                    <i data-lucide="code-2" class="desc-icon" aria-hidden="true"></i>
                                     <span>Developed a phishing detection system utilizing ML models like Random Forest, XGBoost, Gradient Boosting</span>
                                 </li>
                                 <li class="project-desc-item">
-                                    <i data-lucide="code-2" class="desc-icon"></i>
+                                    <i data-lucide="code-2" class="desc-icon" aria-hidden="true"></i>
                                     <span>Applied advanced preprocessing and model evaluation to ensure high accuracy in identifying phishing sites</span>
                                 </li>
                             </ul>
@@ -438,29 +448,37 @@
                             </div>
 
                             <div class="project-buttons">
-                                <a href="https://github.com/sushanth-04" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                                    <i data-lucide="github" class="btn-icon"></i>
+                                <a href="https://github.com/sushanth-04" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn btn-primary btn-sm">
+                                    <i data-lucide="github" class="btn-icon" aria-hidden="true"></i>
                                     View Code
+                                    <span class="sr-only">(opens in new tab)</span>
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="projects-footer">
-                    <a href="https://github.com/sushanth-04" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
-                        <i data-lucide="github" class="btn-icon"></i>
+                    <a href="https://github.com/sushanth-04" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-outline btn-lg">
+                        <i data-lucide="github" class="btn-icon" aria-hidden="true"></i>
                         View All Projects on GitHub
-                        <i data-lucide="external-link" class="btn-icon"></i>
+                        <i data-lucide="external-link" class="btn-icon" aria-hidden="true"></i>
+                        <span class="sr-only">(opens in new tab)</span>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
             <div class="container">
-                <h2 class="section-title">
+                <h2 id="contact-heading" class="section-title">
                     Let's Work <span class="gradient-text">Together</span>
                 </h2>
                 <p class="section-subtitle">
@@ -469,11 +487,11 @@
 
                 <div class="contact-content-wrapper">
                     <!-- Contact Info Cards -->
-                    <div class="contact-info-section">
+                    <address class="contact-info-section">
                         <h3 class="contact-section-title">Get in Touch</h3>
                         <div class="contact-grid">
                             <div class="contact-card">
-                                <div class="contact-icon">
+                                <div class="contact-icon" aria-hidden="true">
                                     <i data-lucide="mail"></i>
                                 </div>
                                 <div class="contact-details">
@@ -483,7 +501,7 @@
                             </div>
 
                             <div class="contact-card">
-                                <div class="contact-icon">
+                                <div class="contact-icon" aria-hidden="true">
                                     <i data-lucide="phone"></i>
                                 </div>
                                 <div class="contact-details">
@@ -493,7 +511,7 @@
                             </div>
 
                             <div class="contact-card">
-                                <div class="contact-icon">
+                                <div class="contact-icon" aria-hidden="true">
                                     <i data-lucide="map-pin"></i>
                                 </div>
                                 <div class="contact-details">
@@ -502,43 +520,55 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </address>
 
                     <!-- Social Links Section -->
-                    <div class="social-section">
+                    <nav class="social-section" aria-label="Social media links">
                         <h3 class="contact-section-title">Connect With Me</h3>
                         <div class="social-links">
-                            <a href="https://linkedin.com/in/bvssushanth" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <div class="social-icon">
+                            <a href="https://linkedin.com/in/bvssushanth" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="social-link">
+                                <div class="social-icon" aria-hidden="true">
                                     <i data-lucide="linkedin"></i>
                                 </div>
                                 <div class="social-details">
                                     <p class="social-label">LinkedIn</p>
                                     <p class="social-value">linkedin.com/in/bvssushanth</p>
                                 </div>
+                                <span class="sr-only">(opens in new tab)</span>
                             </a>
 
-                            <a href="https://github.com/sushanth-04" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <div class="social-icon">
+                            <a href="https://github.com/sushanth-04" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="social-link">
+                                <div class="social-icon" aria-hidden="true">
                                     <i data-lucide="github"></i>
                                 </div>
                                 <div class="social-details">
                                     <p class="social-label">GitHub</p>
                                     <p class="social-value">github.com/sushanth-04</p>
                                 </div>
+                                <span class="sr-only">(opens in new tab)</span>
                             </a>
                         </div>
-                    </div>
+                    </nav>
                 </div>
 
                 <div class="contact-buttons">
                     <a href="mailto:sushanthbongarala04@gmail.com" class="btn btn-primary btn-lg">
-                        <i data-lucide="mail" class="btn-icon"></i>
+                        <i data-lucide="mail" class="btn-icon" aria-hidden="true"></i>
                         Send Email
                     </a>
-                    <a href="https://linkedin.com/in/bvssushanth" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
-                        <i data-lucide="linkedin" class="btn-icon"></i>
+                    <a href="https://linkedin.com/in/bvssushanth" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-outline btn-lg">
+                        <i data-lucide="linkedin" class="btn-icon" aria-hidden="true"></i>
                         Connect on LinkedIn
+                        <span class="sr-only">(opens in new tab)</span>
                     </a>
                 </div>
             </div>
@@ -548,49 +578,59 @@
     <!-- Footer -->
     <footer class="footer">
         <!-- Gradient decoration -->
-        <div class="footer-decoration"></div>
+        <div class="footer-decoration" aria-hidden="true"></div>
         
         <div class="container">
             <div class="footer-content">
                 <!-- Brand -->
                 <div class="footer-brand">
-                    <h3 class="footer-title gradient-text">BVS Sushanth</h3>
+                    <h2 class="footer-title gradient-text">BVS Sushanth</h2>
                     <p class="footer-subtitle">AI/ML Engineer • Problem Solver • Continuous Learner</p>
                 </div>
 
                 <!-- Social Links -->
                 <div class="footer-social">
-                    <a href="https://linkedin.com/in/bvssushanth" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-                        <i data-lucide="linkedin"></i>
+                    <a href="https://linkedin.com/in/bvssushanth" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-btn" 
+                       aria-label="LinkedIn profile (opens in new tab)">
+                        <i data-lucide="linkedin" aria-hidden="true"></i>
                     </a>
-                    <a href="https://github.com/sushanth-04" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-                        <i data-lucide="github"></i>
+                    <a href="https://github.com/sushanth-04" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-btn" 
+                       aria-label="GitHub profile (opens in new tab)">
+                        <i data-lucide="github" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <!-- Quick Links -->
-                <div class="footer-links">
+                <nav class="footer-links" aria-label="Footer navigation">
                     <button class="footer-link" data-target="#about">About</button>
                     <button class="footer-link" data-target="#education">Education</button>
                     <button class="footer-link" data-target="#skills">Skills</button>
                     <button class="footer-link" data-target="#projects">Projects</button>
                     <button class="footer-link" data-target="#contact">Contact</button>
-                </div>
+                </nav>
 
                 <!-- Divider -->
-                <div class="footer-divider"></div>
+                <div class="footer-divider" aria-hidden="true"></div>
 
                 <!-- Copyright -->
                 <div class="footer-copyright">
                     <p class="copyright-text">
-                        Made with <i data-lucide="heart" class="heart-icon"></i> by Sushanth
+                        Made with <i data-lucide="heart" class="heart-icon" aria-hidden="true"></i> by Sushanth
                     </p>
                     <p class="copyright-year">© 2025 Bongarala Venkata Sai Sushanth. All rights reserved.</p>
                 </div>
 
                 <!-- Back to Top -->
-                <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-                    <i data-lucide="arrow-up"></i>
+                <button id="back-to-top" 
+                        class="back-to-top" 
+                        aria-label="Back to top">
+                    <i data-lucide="arrow-up" aria-hidden="true"></i>
                 </button>
             </div>
         </div>

@@ -1500,3 +1500,325 @@ section {
     gap: 4rem;
   }
 }
+/* Add these styles to your existing styles.css file */
+
+/* ========================================
+   ACCESSIBILITY UTILITIES
+   ======================================== */
+
+/* Skip Link - Hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: hsl(var(--primary));
+  color: hsl(var(--background));
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 1000;
+  border-radius: 0 0 0.5rem 0;
+  transition: top 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid hsl(var(--accent));
+  outline-offset: 2px;
+}
+
+/* Screen Reader Only - Visually hidden but accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus Visible - Modern focus states */
+*:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+/* Remove default focus for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure interactive elements have visible focus */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .gradient-text {
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    color: hsl(var(--primary));
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .hero-orb {
+    animation: none;
+  }
+  
+  .scroll-indicator {
+    animation: none;
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (pointer: coarse) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .nav-link,
+  .mobile-nav-link {
+    padding: 1rem;
+  }
+}
+
+/* ========================================
+   ADDRESS ELEMENT STYLING
+   ======================================== */
+
+/* Reset default address styling */
+address {
+  font-style: normal;
+}
+
+/* ========================================
+   IMPROVED BUTTON STATES
+   ======================================== */
+
+/* Better disabled state */
+button:disabled,
+a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Active/pressed state */
+button:active:not(:disabled),
+a:active:not(.disabled) {
+  transform: scale(0.98);
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  /* Hide non-essential elements when printing */
+  .nav,
+  .mobile-menu,
+  .skip-link,
+  .back-to-top,
+  .hero-orb,
+  .scroll-indicator,
+  .floating-badge,
+  .btn,
+  .social-btn {
+    display: none !important;
+  }
+  
+  /* Ensure text is readable */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  /* Show links URLs */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* Page breaks */
+  section {
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}
+
+/* ========================================
+   DARK MODE SUPPORT (Optional Enhancement)
+   ======================================== */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* You can add light mode variables here if needed */
+    /* Your current design is already dark, so this is optional */
+  }
+}
+
+/* ========================================
+   LOADING STATE (Optional Enhancement)
+   ======================================== */
+
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin: -1rem 0 0 -1rem;
+  border: 3px solid hsl(var(--primary) / 0.3);
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   VISUALLY HIDDEN BUT FOCUSABLE
+   ======================================== */
+
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ========================================
+   IMPROVED FORM ACCESSIBILITY (For future use)
+   ======================================== */
+
+/* Error state */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: hsl(var(--destructive));
+}
+
+input:invalid:not(:placeholder-shown):focus,
+textarea:invalid:not(:placeholder-shown):focus {
+  outline-color: hsl(var(--destructive));
+}
+
+/* Success state */
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+/* Required field indicator */
+label.required::after {
+  content: " *";
+  color: hsl(var(--destructive));
+}
+
+/* ========================================
+   RESPONSIVE TEXT SIZING
+   ======================================== */
+
+/* Ensure text scales properly with user preferences */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   ADDITIONAL UTILITY CLASSES
+   ======================================== */
+
+/* Visually hidden but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/* Not selectable text (for decorative elements) */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Truncate text with ellipsis */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Line clamp (limit to specific number of lines) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

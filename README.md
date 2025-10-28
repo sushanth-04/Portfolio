@@ -15,6 +15,24 @@
 - ⚡ **Fast** - Lighthouse score 95+, optimized performance
 - 🌙 **Dark Theme** - Eye-friendly with vibrant accent colors
 
+## 📸 Screenshots
+
+### Desktop View
+<img width="1898" height="912" alt="image" src="https://github.com/user-attachments/assets/aa8bd74e-24ac-474f-8ee6-d06c892ca67f" />
+*Hero section with animated gradient background and typing effect*
+
+### Mobile View
+![WhatsApp Image 2025-10-28 at 12 45 14_0da754ac](https://github.com/user-attachments/assets/cece7ea6-dff3-4089-9c2f-c1b1354705c6)
+*Responsive mobile design with slide-in navigation menu*
+
+### Key Sections
+- 🌟 **Hero** - Dynamic typing animation with gradient orbs
+- 📖 **About** - Professional overview and highlights
+- 🎓 **Education** - Academic journey timeline
+- 💼 **Skills** - Technical and soft skills grid
+- 🚀 **Projects** - Featured work with technology tags
+- 📧 **Contact** - Multiple contact methods
+
 ## 🚀 Quick Start
 
 ```bash
@@ -41,10 +59,13 @@ portfolio/
 ├── package.json            # Test dependencies
 │
 ├── src/assets/             # Images and media
-    ├── about-photo-new.png
-    ├── project-roami.jpg
-    └── project-phishing.jpg
-
+│   ├── about-photo-new.png
+│   ├── project-roami.jpg
+│   └── project-phishing.jpg
+│
+└── tests/                  # Test suite
+    ├── portfolio.test.js
+    └── setup.js
 ```
 
 ## 🛠️ Built With
@@ -54,44 +75,6 @@ portfolio/
 - **JavaScript ES6+** - Vanilla JavaScript (no frameworks)
 - **[Lucide Icons](https://lucide.dev/)** - Icon library
 - **[Google Fonts](https://fonts.google.com/)** - Inter & Space Grotesk
-
-## 🎨 Customization
-
-### Update Personal Information
-
-Edit `index.html`:
-
-```html
-<!-- Hero section -->
-<h1>Hi, I'm <span class="gradient-text">Your Name</span></h1>
-
-<!-- Contact section -->
-<a href="mailto:your.email@example.com">your.email@example.com</a>
-```
-
-### Customize Colors
-
-Edit `styles.css`:
-
-```css
-:root {
-  --primary: 180 100% 50%;      /* Main color (cyan) */
-  --accent: 330 100% 65%;       /* Accent color (pink) */
-  --background: 225 50% 7%;     /* Background color */
-}
-```
-
-### Add/Update Projects
-
-Edit the projects section in `index.html`:
-
-```html
-<article class="project-card">
-  <h3 class="project-title">Your Project</h3>
-  <p>Project description...</p>
-  <span class="tech-tag">Technology</span>
-</article>
-```
 
 ## 🌐 Browser Support
 

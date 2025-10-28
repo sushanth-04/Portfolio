@@ -19,10 +19,12 @@
 
 ### Desktop View
 <img width="1898" height="912" alt="image" src="https://github.com/user-attachments/assets/aa8bd74e-24ac-474f-8ee6-d06c892ca67f" />
+
 *Hero section with animated gradient background and typing effect*
 
 ### Mobile View
 ![WhatsApp Image 2025-10-28 at 12 45 14_0da754ac](https://github.com/user-attachments/assets/cece7ea6-dff3-4089-9c2f-c1b1354705c6)
+
 *Responsive mobile design with slide-in navigation menu*
 
 ### Key Sections

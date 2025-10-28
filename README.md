@@ -2,12 +2,14 @@
 
 > A modern, accessible portfolio website showcasing AI/ML expertise. Built with pure HTML, CSS, and JavaScript—no frameworks needed.
 
+**[🌐 Live Demo](https://sushanth-bongarala.netlify.app/)** 
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## ✨ Features
+## Features
 
 - 🎨 **Modern Design** - Clean UI with gradient accents and smooth animations
 - 📱 **Fully Responsive** - Works seamlessly on mobile, tablet, and desktop
@@ -15,7 +17,7 @@
 - ⚡ **Fast** - Lighthouse score 95+, optimized performance
 - 🌙 **Dark Theme** - Eye-friendly with vibrant accent colors
 
-## 📸 Screenshots
+## Screenshots
 
 ### Desktop View
 <img width="1898" height="912" alt="image" src="https://github.com/user-attachments/assets/aa8bd74e-24ac-474f-8ee6-d06c892ca67f" />
@@ -23,7 +25,7 @@
 *Hero section with animated gradient background and typing effect*
 
 ### Mobile View
-![WhatsApp Image 2025-10-28 at 12 45 14_0da754ac](https://github.com/user-attachments/assets/cece7ea6-dff3-4089-9c2f-c1b1354705c6)
+<img width="400" height="1000" alt="image" src="https://github.com/user-attachments/assets/079f74fc-fe93-4a0e-9ca4-7ceadfc901ab" />
 
 *Responsive mobile design with slide-in navigation menu*
 
@@ -35,7 +37,9 @@
 - 🚀 **Projects** - Featured work with technology tags
 - 📧 **Contact** - Multiple contact methods
 
-## 🚀 Quick Start
+> **Note:** Add your screenshots to a `screenshots/` folder in your repository for the images to display properly.
+
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -50,7 +54,7 @@ npx serve .                       # Using Node.js
 
 Navigate to `http://localhost:8000` if using a local server.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
@@ -70,7 +74,7 @@ portfolio/
     └── setup.js
 ```
 
-## 🛠️ Built With
+## Built With
 
 - **HTML5** - Semantic markup
 - **CSS3** - Modern styling with Grid, Flexbox, and animations
@@ -78,16 +82,8 @@ portfolio/
 - **[Lucide Icons](https://lucide.dev/)** - Icon library
 - **[Google Fonts](https://fonts.google.com/)** - Inter & Space Grotesk
 
-## 🌐 Browser Support
 
-Works on all modern browsers:
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## ♿ Accessibility Features
+## Accessibility Features
 
 - ✅ Full keyboard navigation (Tab, Enter, Escape)
 - ✅ Screen reader compatible
@@ -96,11 +92,11 @@ Works on all modern browsers:
 - ✅ Respects reduced motion preferences
 - ✅ 44×44px minimum touch targets
 
-## 📝 License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## 📞 Contact
+## Contact
 
 **BVS Sushanth** - AI/ML Engineer
 
